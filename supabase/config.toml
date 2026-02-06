@@ -1,0 +1,4 @@
+project_id = "tzvccdbioyvelywfxwuf"
+
+[functions.isbn-lookup]
+verify_jwt = false
