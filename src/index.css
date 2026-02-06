@@ -2,95 +2,108 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Warm library-inspired color palette */
+    --background: 35 25% 97%;
+    --foreground: 25 30% 15%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 35 30% 99%;
+    --card-foreground: 25 30% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 35 30% 99%;
+    --popover-foreground: 25 30% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Rich walnut brown as primary */
+    --primary: 25 45% 25%;
+    --primary-foreground: 35 30% 97%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Warm beige secondary */
+    --secondary: 35 30% 92%;
+    --secondary-foreground: 25 45% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 35 20% 94%;
+    --muted-foreground: 25 15% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Leather accent */
+    --accent: 18 55% 35%;
+    --accent-foreground: 35 30% 97%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 35 20% 88%;
+    --input: 35 20% 88%;
+    --ring: 25 45% 25%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Custom library colors */
+    --library-gold: 42 75% 50%;
+    --library-burgundy: 350 50% 35%;
+    --library-forest: 150 30% 30%;
+    --library-navy: 220 40% 25%;
+    --library-cream: 40 40% 95%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* Gradient definitions */
+    --gradient-warm: linear-gradient(135deg, hsl(35 30% 97%) 0%, hsl(35 30% 92%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(35 30% 99%) 0%, hsl(35 25% 96%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(25 45% 28%) 0%, hsl(18 55% 35%) 100%);
 
-    --sidebar-primary: 240 5.9% 10%;
+    /* Shadows */
+    --shadow-book: 4px 4px 12px -2px hsl(25 30% 15% / 0.15), -2px -2px 8px hsl(35 30% 100% / 0.8);
+    --shadow-card: 0 4px 20px -4px hsl(25 30% 15% / 0.1);
+    --shadow-hover: 0 8px 30px -4px hsl(25 30% 15% / 0.18);
 
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 35 25% 96%;
+    --sidebar-foreground: 25 30% 20%;
+    --sidebar-primary: 25 45% 25%;
+    --sidebar-primary-foreground: 35 30% 97%;
+    --sidebar-accent: 35 25% 92%;
+    --sidebar-accent-foreground: 25 45% 25%;
+    --sidebar-border: 35 20% 88%;
+    --sidebar-ring: 25 45% 25%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 25 25% 8%;
+    --foreground: 35 20% 92%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 25 20% 12%;
+    --card-foreground: 35 20% 92%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 25 20% 12%;
+    --popover-foreground: 35 20% 92%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 35 50% 65%;
+    --primary-foreground: 25 25% 8%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 25 20% 18%;
+    --secondary-foreground: 35 20% 92%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 25 15% 20%;
+    --muted-foreground: 35 15% 60%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 35 50% 50%;
+    --accent-foreground: 25 25% 8%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 25 15% 22%;
+    --input: 25 15% 22%;
+    --ring: 35 50% 65%;
+
+    --sidebar-background: 25 20% 10%;
+    --sidebar-foreground: 35 20% 90%;
+    --sidebar-primary: 35 50% 65%;
+    --sidebar-primary-foreground: 25 25% 8%;
+    --sidebar-accent: 25 15% 18%;
+    --sidebar-accent-foreground: 35 20% 92%;
+    --sidebar-border: 25 15% 22%;
+    --sidebar-ring: 35 50% 65%;
   }
 }
 
@@ -100,6 +113,96 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Libre Baskerville', serif;
+  }
+}
+
+@layer components {
+  .book-card {
+    @apply relative bg-card rounded-xl overflow-hidden transition-all duration-300;
+    box-shadow: var(--shadow-card);
+  }
+
+  .book-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+  }
+
+  .book-cover {
+    @apply relative aspect-[2/3] overflow-hidden;
+    box-shadow: var(--shadow-book);
+  }
+
+  .folder-badge {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium;
+    background: var(--gradient-accent);
+    color: hsl(var(--primary-foreground));
+  }
+
+  .quantity-badge {
+    @apply absolute top-2 right-2 w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold;
+    background: hsl(var(--library-gold));
+    color: hsl(var(--foreground));
+    box-shadow: 0 2px 8px hsl(42 75% 50% / 0.4);
+  }
+
+  .scanner-overlay {
+    @apply fixed inset-0 z-50 bg-black/90 flex items-center justify-center;
+  }
+
+  .scanner-frame {
+    @apply relative w-72 h-48 border-2 border-white/50 rounded-lg;
+  }
+
+  .scanner-line {
+    @apply absolute left-0 right-0 h-0.5 bg-red-500;
+    animation: scan 2s ease-in-out infinite;
+  }
+
+  @keyframes scan {
+    0%, 100% { top: 0; }
+    50% { top: 100%; }
+  }
+
+  .glass-panel {
+    @apply bg-card/80 backdrop-blur-lg border border-border/50 rounded-2xl;
+    box-shadow: var(--shadow-card);
+  }
+
+  .input-library {
+    @apply bg-secondary/50 border-border focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-200;
+  }
+
+  .btn-library {
+    background: var(--gradient-accent);
+    @apply text-primary-foreground font-medium transition-all duration-200;
+  }
+
+  .btn-library:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px hsl(25 45% 25% / 0.3);
+  }
+
+  .empty-state {
+    @apply flex flex-col items-center justify-center py-16 text-center;
+  }
+
+  .empty-state-icon {
+    @apply w-20 h-20 mb-4 text-muted-foreground/40;
+  }
+}
+
+@layer utilities {
+  .font-serif {
+    font-family: 'Libre Baskerville', serif;
+  }
+
+  .text-balance {
+    text-wrap: balance;
   }
 }
